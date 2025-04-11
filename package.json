@@ -1,6 +1,6 @@
 {
     "name": "@mcplet/server",
-    "version": "1.0.3",
+    "version": "1.0.0",
     "description": "MCPlet server",
     "type": "module",
     "bin": {
