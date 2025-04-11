@@ -1,0 +1,40 @@
+{
+    "name": "@mcplet/server",
+    "version": "1.0.0",
+    "description": "MCPlet server",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/mcplet/server.git"
+    },
+    "keywords": [
+      "mcp",
+      "server",
+      "api",
+      "plugin",
+      "easy",
+      "mcp",
+      "spin",
+      "mpc"
+    ],
+    "author": "info@mcplet.com",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/mcplet/server/issues"
+    },
+    "homepage": "https://github.com/mcplet/server#readme",
+  
+    "dependencies": {
+      "@modelcontextprotocol/sdk": "^1.7.0",
+      "node-fetch": "^3.3.2"
+    },
+    "devDependencies": {
+      "@types/node": "^22.13.13",
+      "axios": "^1.8.4",
+      "typescript": "^5.8.2"
+    }
+  }
+  
