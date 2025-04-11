@@ -1,8 +1,14 @@
 {
     "name": "@mcplet/server",
-    "version": "1.0.0",
+    "version": "1.0.3",
     "description": "MCPlet server",
-    "main": "index.js",
+    "type": "module",
+    "bin": {
+        "mcplet-server": "./dist/index.js"
+    },
+    "files": [
+        "dist"
+    ],
     "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1"
     },
