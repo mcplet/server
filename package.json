@@ -1,46 +1,47 @@
 {
     "name": "@mcplet/server",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "description": "MCPlet server",
     "type": "module",
     "bin": {
-        "mcplet-server": "./dist/index.js"
+        "@mcplet/server": "./dist/index.js"
     },
     "files": [
         "dist"
     ],
     "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
+        "make-executable": "node -e \"fs.chmodSync('dist/index.js', '755');\" --require fs",
+        "inspect": "npx @modelcontextprotocol/inspector node dist/index.js",
+        "start": "node dist/index.js",
+        "inspector": "npx @modelcontextprotocol/inspector dist/index.js"
     },
     "repository": {
-      "type": "git",
-      "url": "git+https://github.com/mcplet/server.git"
+        "type": "git",
+        "url": "git+https://github.com/mcplet/server.git"
     },
     "keywords": [
-      "mcp",
-      "server",
-      "api",
-      "plugin",
-      "easy",
-      "mcp",
-      "spin",
-      "mpc"
+        "mcp",
+        "server",
+        "api",
+        "plugin",
+        "easy",
+        "mcp",
+        "spin",
+        "mpc"
     ],
     "author": "info@mcplet.com",
     "license": "ISC",
     "bugs": {
-      "url": "https://github.com/mcplet/server/issues"
+        "url": "https://github.com/mcplet/server/issues"
     },
     "homepage": "https://github.com/mcplet/server#readme",
-  
     "dependencies": {
-      "@modelcontextprotocol/sdk": "^1.7.0",
-      "node-fetch": "^3.3.2"
+        "@modelcontextprotocol/sdk": "^1.7.0",
+        "node-fetch": "^3.3.2"
     },
     "devDependencies": {
-      "@types/node": "^22.13.13",
-      "axios": "^1.8.4",
-      "typescript": "^5.8.2"
+        "@types/node": "^22.13.13",
+        "axios": "^1.8.4",
+        "typescript": "^5.8.2"
     }
-  }
-  
+}

@@ -36,10 +36,10 @@ npm install
 To use MCPlet Server, you need to provide a unique identifier (UID) when starting the server:
 
 ```bash
-node index.js YOUR_UID
+node dist/index.js YOUR_UID
 ```
 
-Replace `YOUR_UID` with your MCPlet unique identifier. You can obtain a UID by registering at [mcplet.com](https://www.mcplet.com).
+Replace `YOUR_UID` with your MCPlet unique identifier, please check [mcplet.com/admin](https://www.mcplet.com/admin) for more details. You can obtain a UID by registering at [mcplet.com](https://www.mcplet.com).
 
 ## How It Works
 
