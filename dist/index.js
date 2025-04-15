@@ -36,6 +36,33 @@ async function fetchRemoteData(endpoint) {
   }
 }
 
+async function postRemoteData(endpoint, postBody) {
+  try {
+	const fetchurl = `${REMOTE_BASE_URL}/${uid}/${endpoint}`;
+	const response = await fetch(fetchurl, {
+		method: "post",
+		headers: {
+			'Accept': 'application/json',
+			'Content-Type': 'application/json'
+		},
+
+	  //make sure to serialize your JSON body
+		body: JSON.stringify(postBody)
+	});
+  
+    
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    
+    const json  = await response.json();
+    return json;
+  } catch (error) {
+    return [];
+  }
+}
+
+
 const server = new Server(
   {
     name: "mcplet-mcp-server",
@@ -57,7 +84,7 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
 // Handle tool execution
 server.setRequestHandler(CallToolRequestSchema, async (request) => {
   const toolname = request.params.name;
-  const invokeRes = await fetchRemoteData(`invoke?method=${toolname}`);
+  const invokeRes = await postRemoteData('',request.params);
   return invokeRes;
 });
 
